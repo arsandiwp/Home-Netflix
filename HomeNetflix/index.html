@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Netflix</title>
+   <link rel="icon" href="image/netflix.ico">
+   <!-- CSS -->
+   <link rel="stylesheet" href="style.css">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous" />
+   <!-- Font Google -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <header>
+      <img src="image/logo.png" alt="" class="logo">
+      <ul class="navbar">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">TV Shows</a></li>
+         <li><a href="#">Movies</a></li>
+         <li><a href="#">Latest</a></li>
+         <li><a href="#">My List</a></li>
+      </ul>
+      <div class="search">
+         <input type="text" placeholder="Search">
+         <i class="fa fa-search"></i>
+      </div>
+   </header>
+   <div class="banner">
+      <img src="image/bg.jpg" alt="" class="bg">
+      <div class="content">
+         <h1 class="Titlemovie">Perjalanan<br><span>Gn. Lawu</span></h1>
+         <h4>
+            <span>2021</span>
+            <span><i>All+</i></span>
+            <span>24h 55min</span>
+            <span>Survival , Horor</span>
+         </h4>
+         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias esse sit incidunt suscipit. Placeat
+            eaque fugiat animi aspernatur maiores dolorem ut voluptates excepturi magni quibusdam dolores, optio
+            quisquam nihil corporis, iusto tempore est officiis! Nisi placeat maxime omnis adipisci vel recusandae,
+            ipsam consequatur sint unde voluptates? Quod nesciunt culpa, provident dolores illum accusamus officiis
+            quibusdam voluptatibus facere tenetur veniam, architecto repellat velit eligendi mollitia! Minus, placeat
+            cum nam culpa labore repellat facere necessitatibus debitis id aut odio inventore, facilis eius.</p>
+         <div class="button">
+            <a href="#"><i class="fas fa-play"></i>Play</a>
+            <a href="#"><i class="fas fa-plus"></i>My List</a>
+         </div>
+      </div>
+      <p class="play" onclick="toggleVideo();"><img src="image/play.png" alt="">Watch Trailer</p>
+   </div>
+
+   <div class="trailer">
+      <video src="video/trailer.mp4" controls="true"></video>
+      <img src="image/close.png" alt="" class="close" onclick="toggleVideo();">
+   </div>
+
+
+   <script>
+      function toggleVideo() {
+         const trailer = document.querySelector('.trailer');
+         const video = document.querySelector('video');
+         trailer.classList.toggle('active')
+         video.currentTime = 0;
+         video.pause();
+      }
+   </script>
+
+
+
+
+
+</body>
+
+</html>
